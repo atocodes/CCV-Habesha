@@ -1,0 +1,183 @@
+:root {
+  --background-color: azure;
+  --cornflower-blue: #5388f2ff;
+  --white: #f5f5f5;
+  --royal-blue-web-color: #346ee0ff;
+  --black: #181823;
+}
+
+@font-face {
+  font-family: "Tera";
+  src: url("../assets/Tera-Regular.ttf");
+}
+p {
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.btn {
+  height: 75%;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 1s;
+}
+.btn span {
+  cursor: default;
+}
+
+.shuffel {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  background-color: var(--royal-blue-web-color);
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: var(--white);
+  z-index: 1;
+  cursor: default;
+}
+.shuffel p {
+  margin: 0;
+}
+.shuffel .fa-solid {
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+.shuffel .fa-solid:hover {
+  color: var(--black);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+}
+body main .textboxArea,
+body main .resultArea {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  overflow-x: auto;
+}
+body main .textboxArea {
+  background-color: var(--cornflower-blue);
+  grid-template-rows: 90% 10%;
+  grid-template-columns: 100%;
+}
+body main .textboxArea textarea {
+  background: transparent;
+  border: none;
+  height: 90%;
+  width: 90%;
+  font-size: 2rem;
+  resize: none;
+  font-family: "Tera";
+  color: var(--white);
+}
+body main .textboxArea textarea:focus {
+  outline: none;
+}
+body main .textboxArea .btns {
+  height: 100%;
+  width: 100%;
+  background-color: var(--royal-blue-web-color);
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 100%;
+  align-items: center;
+  justify-items: center;
+}
+body main .textboxArea .btns .encode {
+  background-color: var(--white);
+  color: var(--black);
+  box-shadow: 3px 3px var(--black);
+}
+body main .textboxArea .btns .decode {
+  background-color: var(--black);
+  color: var(--white);
+  box-shadow: 3px 3px var(--white);
+}
+body main .textboxArea .btns .encode:hover {
+  background-color: var(--black);
+  box-shadow: 3px 3px var(--white);
+  color: var(--white);
+}
+body main .textboxArea .btns .decode:hover {
+  background-color: var(--white);
+  box-shadow: 3px 3px var(--black);
+  color: var(--black);
+}
+body main .resultArea {
+  background-color: var(--white);
+  position: relative;
+}
+body main .resultArea .fa-copy {
+  color: var(--cornflower-blue);
+  position: absolute;
+  bottom: 2vh;
+  right: 2vw;
+  transition: 1s;
+}
+body main .resultArea .fa-copy:hover {
+  color: var(--black);
+}
+body main .resultArea p {
+  font-family: "Tera";
+  width: 80%;
+  color: var(--cornflower-blue);
+}
+
+@media screen and (max-width: 400px) {
+  body .shuffel {
+    width: 80px;
+    height: 80px;
+  }
+  body main {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-areas: "result" "input";
+  }
+  body main .textboxArea {
+    grid-area: input;
+    grid-template-rows: 80% 20%;
+  }
+  body main .textboxArea textarea {
+    height: 70%;
+  }
+  body main .textboxArea .btns {
+    height: 80px;
+  }
+  body main .textboxArea .btns #decode,
+  body main .textboxArea .btns #encode {
+    width: 100px;
+    height: 40px;
+  }
+  body main .resultArea {
+    grid-area: result;
+  }
+  body main .resultArea #copy {
+    top: 2vh;
+  }
+}/*# sourceMappingURL=style.css.map */

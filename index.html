@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ceasor Cipher V ሐበሻ </title>
+    <link rel="shortcut icon" href="./assets/images/logo.png">
+    <script
+      src="https://kit.fontawesome.com/f7c40fbebc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="shuffel">
+      <i class="fa-solid fa-caret-up" id="incShuffelValue" title="Increase Shuffel Value"></i>
+      <p id="shuffel"></p>
+      <i class="fa-solid fa-caret-down" id="decShuffelValue" title="Decrease Shuffel Value"></i>
+    </div>
+
+    <main>
+      <div class="textboxArea">
+        <!-- <p>Hello</p> -->
+        <textarea autofocus name="text" id="inptext" cols="30" rows="10"></textarea>
+        <div class="btns">
+          <div class="encode btn" id="encode">
+            <span>Encode</span>
+          </div>
+
+          <div class="decode btn" id="decode">
+            <span>Decode</span>
+          </div>
+        </div>
+      </div>
+      <div class="resultArea">
+        <p id="result">Bonjour</p>
+        <i class="fa-solid fa-copy fa-2x" id="copy" title="Copy To Clipboard"></i>
+      </div>
+    </main>
+
+    <script src="script/ceasorcipherAmh.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
