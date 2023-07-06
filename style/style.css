@@ -57,6 +57,27 @@ p {
   color: var(--black);
 }
 
+#about {
+  position: absolute;
+  top: 0;
+  left: 1vw;
+  font-family: "Tera";
+  font-size: 1rem;
+}
+#about a {
+  color: var(--royal-blue-web-color);
+  opacity: 10%;
+  text-decoration: none;
+  transition: 1s;
+}
+#about a:hover {
+  opacity: 100%;
+  color: var(--royal-blue-web-color);
+}
+#about span {
+  font-size: 1rem;
+}
+
 body {
   margin: 0;
   padding: 0;

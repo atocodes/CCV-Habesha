@@ -61,6 +61,30 @@ p {
   }
 }
 
+#about {
+  position: absolute;
+  top: 0;
+  left: 1vw;
+  font-family: "Tera";
+  font-size: 1rem;
+
+  a {
+    color: var(--royal-blue-web-color);
+    opacity: 10%;
+    text-decoration: none;
+    transition: 1s;
+  }
+
+  a:hover{
+    opacity: 100%;
+    color: var(--royal-blue-web-color);
+  }
+
+  span{
+    font-size: 1rem;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -200,7 +224,7 @@ body {
       .resultArea {
         grid-area: result;
 
-        #copy{
+        #copy {
           top: 2vh;
         }
       }
